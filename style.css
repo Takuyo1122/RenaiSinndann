@@ -1,0 +1,318 @@
+/* 基本スタイル */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #fff5f7;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+header {
+    margin-bottom: 25px;
+}
+
+h1, h2, h3 {
+    color: #ff4d6d;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* 画面共通スタイル */
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    transition: all 0.3s ease;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+}
+
+/* スタート画面 */
+.intro-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 質問画面 */
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ff8fa3, #ff4d6d);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+#progress-text {
+    font-size: 14px;
+    color: #888;
+    align-self: flex-start;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* ボタンスタイル */
+.btn {
+    background: linear-gradient(135deg, #ff8fa3, #ff4d6d);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 77, 109, 0.2);
+    width: 100%;
+    max-width: 300px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 77, 109, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.secondary {
+    background: white;
+    color: #ff4d6d;
+    border: 2px solid #ff4d6d;
+    box-shadow: none;
+}
+
+.secondary:hover {
+    background: #fff5f7;
+    box-shadow: none;
+}
+
+.option-btn {
+    background-color: white;
+    color: #333;
+    padding: 16px;
+    border-radius: 12px;
+    border: 2px solid #eee;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    font-size: 15px;
+}
+
+.option-btn:hover {
+    border-color: #ffb3c1;
+    background-color: #fff5f7;
+}
+
+/* 結果画面 */
+#result-content {
+    width: 100%;
+    text-align: left;
+}
+
+.trait-result {
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: #fff9fb;
+    border-radius: 12px;
+    border-left: 5px solid #ff8fa3;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.trait-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.trait-name {
+    font-weight: 700;
+    color: #ff4d6d;
+    font-size: 18px;
+}
+
+.trait-level {
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.high {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.low {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.neutral {
+    background-color: #e2e3e5;
+    color: #383d41;
+}
+
+.trait-bar-container {
+    height: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.trait-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #ffb3c1, #ff4d6d);
+    border-radius: 10px;
+    transition: width 1s ease;
+}
+
+.trait-description {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.trait-details {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.strength, .weakness {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.strength {
+    background-color: #f0fff0;
+    border-left: 4px solid #5cb85c;
+}
+
+.weakness {
+    background-color: #fff0f0;
+    border-left: 4px solid #d9534f;
+}
+
+.final-advice {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    border-left: 5px solid #6c757d;
+}
+
+.final-advice h3 {
+    color: #495057;
+    margin-bottom: 15px;
+}
+
+.final-advice p {
+    color: #495057;
+}
+
+.result-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.result-actions .btn {
+    max-width: 200px;
+    margin: 0;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    .trait-details {
+        flex-direction: column;
+    }
+    
+    .result-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .result-actions .btn {
+        max-width: 100%;
+    }
+}

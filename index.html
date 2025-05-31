@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>恋愛性格診断</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>恋愛性格診断</h1>
+            <p>あなたの恋愛スタイルを分析します</p>
+        </header>
+        
+        <div id="start-screen" class="screen">
+            <div class="intro-image">
+                <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="恋愛診断">
+            </div>
+            <p>12の質問に答えて、あなたの恋愛における性格特性を分析しましょう！</p>
+            <button id="start-btn" class="btn">診断を始める</button>
+        </div>
+        
+        <div id="question-screen" class="screen hidden">
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+            <p id="progress-text">質問1/12</p>
+            
+            <h2 id="question-text">質問がここに表示されます</h2>
+            
+            <div class="options">
+                <!-- 選択肢はJavaScriptで動的に追加 -->
+            </div>
+        </div>
+        
+        <div id="result-screen" class="screen hidden">
+            <h2>あなたの診断結果</h2>
+            
+            <div id="result-content">
+                <!-- 結果はJavaScriptで動的に追加 -->
+            </div>
+            
+            <div class="result-actions">
+                <button id="restart-btn" class="btn">もう一度診断する</button>
+                <button id="share-btn" class="btn secondary">結果を共有</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
